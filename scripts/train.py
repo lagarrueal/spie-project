@@ -112,3 +112,6 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=5)
 model.fit(X_train, y_train, epochs=100, batch_size=256, validation_data=(X_test, y_test), callbacks=[early_stopping], verbose = 1)
 
 model.save('model.h5')
+
+# test the model
+accuracy = model.evaluate(X_test, y_test)
